@@ -1,4 +1,4 @@
-Amazon.OrderFulfillment
-=======================
+Sample Amazon Order Fulfillment Simulation 
+======
 
-Sample event driven architecture using sagas for long running transactions.
+Demonstrates Sagas and Event Driven Architecture

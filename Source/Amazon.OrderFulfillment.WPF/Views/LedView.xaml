@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Amazon.OrderFulfillment.WPF.Views.LedView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Converter="clr-namespace:Amazon.OrderFulfillment.WPF.Converter"
+             xmlns:Views="clr-namespace:Amazon.OrderFulfillment.WPF.Views"
+             xmlns:DependencyProperties="clr-namespace:Amazon.OrderFulfillment.WPF.DependencyProperties"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             Name="ledView">
+    <UserControl.Resources>
+        <Converter:TypeToResourceKeyConverter x:Key="ResourceKeyConverter"/>
+        <BitmapImage x:Key="Image.Good" UriSource="../Images/Green.png"/>
+        <BitmapImage x:Key="Image.Bad" UriSource="../Images/Red.png"/>
+        <BitmapImage x:Key="Image.Pending" UriSource="../Images/Orange.png"/>
+        <BitmapImage x:Key="Image.Unknown" UriSource="../Images/Grey.png"/>
+    </UserControl.Resources>
+    <Grid>
+        <Image HorizontalAlignment="Center"
+                   Width="30"
+                    Height="30">
+          <DependencyProperties:ResourceKeyBindings.SourceResourceKeyBinding>
+                <Binding Converter="{StaticResource ResourceKeyConverter}" ConverterParameter="Image.{0}" Path="LedState">
+                    <Binding.RelativeSource>
+                        <RelativeSource 
+                           Mode="FindAncestor"
+                           AncestorType="{x:Type Views:LedView}"
+                           AncestorLevel="1"
+                        />
+                    </Binding.RelativeSource>
+
+                </Binding>
+            </DependencyProperties:ResourceKeyBindings.SourceResourceKeyBinding>
+        </Image>
+    </Grid>
+</UserControl>

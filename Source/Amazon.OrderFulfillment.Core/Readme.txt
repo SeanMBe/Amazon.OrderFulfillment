@@ -1,0 +1,1 @@
+﻿The core domain project is meant to only contain classes that are for modeling the problem domain per Eric Evans book on Domain Driven Design.

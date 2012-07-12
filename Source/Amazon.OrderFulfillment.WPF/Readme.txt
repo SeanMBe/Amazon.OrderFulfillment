@@ -1,0 +1,1 @@
+﻿The WPF project is a User Interface project only meant to hold the user interface, but making use of the modeled domain in core.

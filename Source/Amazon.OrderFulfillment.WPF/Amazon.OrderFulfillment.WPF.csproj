@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64AF75BB-4B2C-4E95-8EA4-F661CD95F6BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Amazon.OrderFulfillment.WPF</RootNamespace>
+    <AssemblyName>Amazon.OrderFulfillment.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\packages\Castle.Core.3.0.0.4001\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MavenThought.Commons">
+      <HintPath>..\packages\maventhought.commons.0.9.5\lib\MavenThought.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\Dependencies\CommonServiceLocator\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.3.0.1.10\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Factory">
+      <HintPath>..\..\packages\Ninject.Extensions.Factory.3.0.1.0\lib\net40\Ninject.Extensions.Factory.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BootStrapper.cs" />
+    <Compile Include="Common\BaseNotifyPropertyChanged.cs" />
+    <Compile Include="Common\IBaseNotifyPropertyChanged.cs" />
+    <Compile Include="IOCContainer\GenericInfrastructureDependenciesModule.cs" />
+    <Compile Include="IOCContainer\SagaDependenciesModule.cs" />
+    <Compile Include="IOCContainer\ViewModelDependenciesModule.cs" />
+    <Compile Include="ViewModel\Orders\OrdersStateChangeObserver.cs" />
+    <Compile Include="ViewModel\Orders\OrdersDataViewModel.cs" />
+    <Compile Include="ViewModel\Orders\OrdersViewModel.cs" />
+    <Compile Include="ViewModel\Orders\IOrdersStateChangeObserver.cs" />
+    <Compile Include="ViewModel\Orders\IOrdersDataViewModel.cs" />
+    <Compile Include="ViewModel\Orders\IOrdersViewModel.cs" />
+    <Compile Include="ViewModel\Factories\IOrdersDataViewModelFactory.cs" />
+    <Compile Include="IOCContainer\UtilitiesDependenciesModule.cs" />
+    <Compile Include="IOCContainer\IOC.cs" />
+    <Compile Include="IOCContainer\CordDomainModule.cs" />
+    <Compile Include="IOCContainer\NinjectServiceLocator.cs" />
+    <Compile Include="Converter\TypeToResourceKeyConverter.cs" />
+    <Compile Include="DependencyProperties\ResourceKeyBindings.cs" />
+    <Compile Include="DependencyProperties\ResourceKeyBindingPropertyFactory.cs" />
+    <Compile Include="Extensions\ResourceKeyBindingExtension.cs" />
+    <Compile Include="Extensions\ResourceKeyToResourceConverter.cs" />
+    <Compile Include="ViewModel\TelephonyFactoryConfigurationVM\Commands\IOrderFactory.cs" />
+    <Compile Include="ViewModel\TelephonyFactoryConfigurationVM\Commands\IStartOrderCommand.cs" />
+    <Compile Include="ViewModel\TelephonyFactoryConfigurationVM\Commands\StartOrderCommand.cs" />
+    <Compile Include="ViewModel\TelephonyFactoryConfigurationVM\IOrdersFulfillmentViewModel.cs" />
+    <Compile Include="ViewModel\LedViewModel\LedViewModel.cs" />
+    <Compile Include="ViewModel\TelephonyFactoryConfigurationVM\Commands\ShowLogConfigCommand.cs" />
+    <Compile Include="Views\OrdersView.xaml.cs">
+      <DependentUpon>OrdersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderFulfillmentView.xaml.cs">
+      <DependentUpon>OrderFulfillmentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\TelephonyFactoryConfigurationVM\OrdersFulfillmentViewModel.cs" />
+    <Compile Include="Views\LedView.xaml.cs">
+      <DependentUpon>LedView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\OrdersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OrderFulfillmentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Amazon.Infrastructure.General.Interfaces\Amazon.Infrastructure.General.Interfaces.csproj">
+      <Project>{B6B13167-D182-4DDB-B0A2-EC28E20B4AB6}</Project>
+      <Name>Amazon.Infrastructure.General.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Amazon.Infrastructure.General\Amazon.Infrastructure.General.csproj">
+      <Project>{F49E2CC8-84A0-4E2E-97F6-7DD53C2D9A9A}</Project>
+      <Name>Amazon.Infrastructure.General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Amazon.OrderFulfillment.Core\Amazon.OrderFulfillment.Core.csproj">
+      <Project>{315ACDC8-55EF-4686-A0EA-F8392CAB4BA4}</Project>
+      <Name>Amazon.OrderFulfillment.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Amazon.OrderFulfillment.Domain\Amazon.OrderFulfillment.Domain.csproj">
+      <Project>{45BB99FE-20D7-4ED0-9A31-9B511676FA75}</Project>
+      <Name>Amazon.OrderFulfillment.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Green.png" />
+    <Resource Include="Images\Grey.png" />
+    <Resource Include="Images\Orange.png" />
+    <Resource Include="Images\Red.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

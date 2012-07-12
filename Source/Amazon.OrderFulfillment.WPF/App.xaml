@@ -1,0 +1,9 @@
+﻿<Application x:Class="Amazon.OrderFulfillment.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" StartupUri="Views\OrderFulfillmentView.xaml">
+    <Application.Resources>
+
+ 
+    </Application.Resources>
+    
+</Application>

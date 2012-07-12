@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="Amazon.OrderFulfillment.WPF.Views.OrdersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Views="clr-namespace:Amazon.OrderFulfillment.WPF.Views" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,-86">
+            <StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60" HorizontalAlignment="Left">Id</TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60" HorizontalAlignment="Left">Order Placed</TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60" HorizontalAlignment="Left">Payment Processed</TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60"  HorizontalAlignment="Left">Begin Order Fulfillment</TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60"  HorizontalAlignment="Left">Fulfillment Duration</TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60"  HorizontalAlignment="Left">Shipped</TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60"  HorizontalAlignment="Left">Product Return</TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60"  HorizontalAlignment="Left">Product Returned New In Box Condition</TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60"  HorizontalAlignment="Left">Customer Refunded</TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60" HorizontalAlignment="Left">Cancelled</TextBlock>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1">
+                    <TextBlock FontSize="12" Height="30" TextWrapping="Wrap" Width="60" HorizontalAlignment="Left">Complete</TextBlock>
+                </Border>
+            </StackPanel>
+            <ItemsControl ItemsSource="{Binding Orders}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate> 
+                        <StackPanel>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Label Height="30" Content="{Binding Values[0]}"></Label>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Views:LedView LedState="{Binding Values[1]}"/>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Views:LedView LedState="{Binding Values[2]}"/>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Views:LedView LedState="{Binding Values[3]}"/>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Label Height="30" Content="{Binding Values[4]}"/>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Views:LedView LedState="{Binding Values[5]}"/>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Views:LedView LedState="{Binding Values[6]}"/>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Views:LedView LedState="{Binding Values[7]}"/>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Views:LedView LedState="{Binding Values[8]}"/>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Views:LedView LedState="{Binding Values[9]}"/>
+                            </Border>
+                            <Border BorderBrush="Black" BorderThickness="1">
+                                <Views:LedView LedState="{Binding Values[10]}"/>
+                            </Border>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+</UserControl>
