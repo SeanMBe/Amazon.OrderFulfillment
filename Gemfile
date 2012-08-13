@@ -1,0 +1,15 @@
+source :rubygems
+
+group :runtime do
+end
+
+group :dev do
+end
+
+group :setup do
+	gem 'albacore'
+	gem 'git'
+end
+
+group :tools do
+end

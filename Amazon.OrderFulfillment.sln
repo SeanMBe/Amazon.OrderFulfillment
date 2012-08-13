@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.OrderFulfillment.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.OrderFulfillment.WPF", "Source\Amazon.OrderFulfillment.WPF\Amazon.OrderFulfillment.WPF.csproj", "{64AF75BB-4B2C-4E95-8EA4-F661CD95F6BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.OrderFulfillment..Acceptance.Tests", "Tests\acceptance\Amazon.OrderFulfillment.Tests\Amazon.OrderFulfillment..Acceptance.Tests.csproj", "{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.OrderFulfillment.WPF.Tests", "Tests\unit\Amazon.OrderFulfillment.WPF.Tests\Amazon.OrderFulfillment.WPF.Tests.csproj", "{62E1B804-FC15-4FAC-95BE-C08903C4A9CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.OrderFulfillment.Core.Tests", "Tests\unit\Amazon.OrderFulfillment.Core.Tests\Amazon.OrderFulfillment.Core.Tests.csproj", "{2E0947A7-C106-4E99-9091-CE0B806AB568}"
@@ -85,16 +83,6 @@ Global
 		{64AF75BB-4B2C-4E95-8EA4-F661CD95F6BC}.Release|Mixed Platforms.Build.0 = Release|x86
 		{64AF75BB-4B2C-4E95-8EA4-F661CD95F6BC}.Release|x86.ActiveCfg = Release|x86
 		{64AF75BB-4B2C-4E95-8EA4-F661CD95F6BC}.Release|x86.Build.0 = Release|x86
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB}.Release|x86.ActiveCfg = Release|Any CPU
 		{62E1B804-FC15-4FAC-95BE-C08903C4A9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{62E1B804-FC15-4FAC-95BE-C08903C4A9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62E1B804-FC15-4FAC-95BE-C08903C4A9CD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -124,6 +112,5 @@ Global
 		{F6BFBE32-58FF-4A4F-B92F-E0ACFF16A05D} = {348BD964-5412-42B5-972D-F42FC545DEE5}
 		{62E1B804-FC15-4FAC-95BE-C08903C4A9CD} = {0B9BF8EB-4930-498B-8371-774952201550}
 		{2E0947A7-C106-4E99-9091-CE0B806AB568} = {0B9BF8EB-4930-498B-8371-774952201550}
-		{2CAEE1C8-5A9B-407A-95E6-5FD0668F8FBB} = {F6BFBE32-58FF-4A4F-B92F-E0ACFF16A05D}
 	EndGlobalSection
 EndGlobal

@@ -49,7 +49,6 @@
     <Compile Include="IOrderFulfillmentSaga.cs" />
     <Compile Include="IOrderFulfillmentSagaDataFactory.cs" />
     <Compile Include="IOrderFulfillmentSagaManager.cs" />
-    <Compile Include="TypeOfDevice.cs" />
     <Compile Include="OrderEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

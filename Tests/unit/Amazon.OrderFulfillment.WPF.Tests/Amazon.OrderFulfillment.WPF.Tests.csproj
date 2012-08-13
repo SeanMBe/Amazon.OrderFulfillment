@@ -33,38 +33,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="developwithpassion.specifications">
-      <HintPath>..\packages\developwithpassion.specifications.rhinomocks.0.4.24.4\lib\developwithpassion.specifications.dll</HintPath>
+      <HintPath>..\..\..\packages\developwithpassion.specifications.rhinomocks.0.4.24.4\lib\developwithpassion.specifications.dll</HintPath>
     </Reference>
     <Reference Include="developwithpassion.specifications.rhinomocks">
-      <HintPath>..\packages\developwithpassion.specifications.rhinomocks.0.4.24.4\lib\developwithpassion.specifications.rhinomocks.dll</HintPath>
+      <HintPath>..\..\..\packages\developwithpassion.specifications.rhinomocks.0.4.24.4\lib\developwithpassion.specifications.rhinomocks.dll</HintPath>
     </Reference>
     <Reference Include="Machine.Fakes">
-      <HintPath>..\packages\Machine.Fakes.0.3.5\lib\Machine.Fakes.dll</HintPath>
+      <HintPath>..\..\..\packages\Machine.Fakes.0.3.5\lib\Machine.Fakes.dll</HintPath>
     </Reference>
     <Reference Include="Machine.Fakes.Adapters.RhinoMocks">
-      <HintPath>..\packages\Machine.Fakes.RhinoMocks.0.3.5\lib\Machine.Fakes.Adapters.RhinoMocks.dll</HintPath>
+      <HintPath>..\..\..\packages\Machine.Fakes.RhinoMocks.0.3.5\lib\Machine.Fakes.Adapters.RhinoMocks.dll</HintPath>
     </Reference>
     <Reference Include="Machine.Specifications">
-      <HintPath>..\packages\Machine.Specifications.0.5.6.0\lib\net40\Machine.Specifications.dll</HintPath>
+      <HintPath>..\..\..\packages\Machine.Specifications.0.5.6.0\lib\net40\Machine.Specifications.dll</HintPath>
     </Reference>
     <Reference Include="Machine.Specifications.Clr4">
-      <HintPath>..\packages\Machine.Specifications.0.5.6.0\lib\net40\Machine.Specifications.Clr4.dll</HintPath>
+      <HintPath>..\..\..\packages\Machine.Specifications.0.5.6.0\lib\net40\Machine.Specifications.Clr4.dll</HintPath>
     </Reference>
     <Reference Include="MavenThought.Commons">
-      <HintPath>..\packages\maventhought.commons.0.9.5\lib\MavenThought.Commons.dll</HintPath>
+      <HintPath>..\..\..\packages\maventhought.commons.0.9.5\lib\MavenThought.Commons.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\Dependencies\CommonServiceLocator\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <HintPath>..\..\..\Dependencies\CommonServiceLocator\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="Ninject">
-      <HintPath>..\Dependencies\Ninject\Ninject.dll</HintPath>
+      <HintPath>..\..\..\Dependencies\Ninject\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="nunit.core">
-      <HintPath>..\Teletics.Wintercom.WPF.Acceptance.Tests\bin\Debug\nunit.core.dll</HintPath>
+      <HintPath>..\..\..\Dependencies\bin\Debug\nunit.core.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="Rhino.Mocks">
-      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+      <HintPath>..\..\..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
